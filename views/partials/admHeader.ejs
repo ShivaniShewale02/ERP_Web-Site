@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Dashboard</title>
+
+  <!-- W3 CSS CDN -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Our Custom CSS -->
+  <link rel="stylesheet" href="/css/sidenavstyle.css">
+  <link rel="icon" href="/favicon/favicon.ico">
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+  <!-- Font Awesome kit -->
+  <script src="https://kit.fontawesome.com/b95b3d9c3a.js" crossorigin="anonymous"></script>
+  <!-- sweet alert -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <!-- bootstrap  -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- jQuery cdn  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <div class="wrapper font">
+    <!-- Sidebar Holder -->
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <h3>Admin</h3>
+      </div>
+
+
+      <ul id="classActive" class="list-unstyled components">
+            <li class="<%= pageName === 'addFaculty'? 'link active' : 'link' %>">
+              <a href="/admin/addFaculty">Add Faculty</a>
+            </li>
+            <li class="<%= pageName === 'facultyList'? 'link active' : 'link' %>">
+              <a href="/admin/facultyList">List of Faculties</a>
+            </li>
+
+        <li class="<%= pageName === 'addTimeTable'? 'link active' : 'link' %>">
+          <a href="/admin/timeTable">Add Time-Table</a>
+        </li> 
+        <li class="<%= pageName === 'viewTimeTable'? 'link active' : 'link' %>">
+          <a href="/admin/viewTimeTable">View Time-Table</a>
+        </li>
+        <li class="<%= pageName === 'freeSlot'? 'link active' : 'link' %>">
+          <a href="/admin/freeSlot">View Free Slot</a>
+        </li>
+        <li class="<%= pageName === 'facEvent'? 'link active' : 'link' %>">
+          <a href="/admin/facEvent">View Faculty Event</a>
+        </li>
+        <hr>
+        <li class="<%= pageName === 'addStudent'? 'link active' : 'link' %>">
+          <a href="/admin/addStudent">Add Student</a>
+        </li>
+        <li class="<%= pageName === 'studentList'? 'link active' : 'link' %>">
+          <a href="/admin/studentList">List of Students</a>
+        </li>
+      </ul>
+
+      <ul class="list-unstyled CTAs">
+        <li><a href="/admin/logout" class="logout">Log Out</a></li>
+      </ul>
+    </nav>
+
+    <!-- Page Content Holder -->
+    <div id="content">
+
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+
+          <div class="navbar-header">
+            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          <a class="navbar-brand" id="nav-brand" href="">Dashboard</a>
+
+          
+        </div>
+      </nav>
+      <div class="dashboard-content">

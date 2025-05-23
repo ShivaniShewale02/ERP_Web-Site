@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Dashboard</title>
+
+        <!-- W3 CSS CDN -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <!-- Bootstrap CSS CDN -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="/css/sidenavstyle.css">
+        <link rel="icon" href="/favicon/favicon.ico">
+        <link rel="stylesheet" href="/css/studstyle.css">
+        <!-- Scrollbar Custom CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+        <!-- Font Awesome kit -->
+        <script src="https://kit.fontawesome.com/b95b3d9c3a.js" crossorigin="anonymous"></script>
+        <!-- sweet alert -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    </head>
+    <body>
+
+
+
+        <div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <span style="display: inline-block; margin-top: 10px;">welcome,</span>
+                    <h3 style="margin-top: 0;"><%=studentName%></h3>
+                </div>
+
+                <ul id="classActive" class="list-unstyled components">
+
+                    <li class="<%= pageName === 'profile'? 'link active' : 'link' %>">
+                        <a href="/student/profile">My Profile</a>
+                    </li>
+                    <li class="<%= pageName === 'viewEvent'? 'link active' : 'link' %>">
+                        <a href="/student/viewEvent">View General Events</a>
+                    </li>
+                    <li class="<%= pageName === 'viewFacultyEvent'? 'link active' : 'link' %>">
+                        <a href="/student/viewFacultyEvent">View Faculty Events</a>
+                    </li>
+                    <li class="<%= pageName === 'freeSlot'? 'link active' : 'link' %>">
+                        <a href="/student/freeSlot">Free Slot</a>
+                    </li>
+                    <li class="<%= pageName === 'editProfile'? 'link active' : 'link' %>">
+                        <a href="/student/editProfile">Edit Profile</a>
+                    </li>
+                </ul>
+
+                <ul class="list-unstyled CTAs">
+                    <li><a href="/student/logout" class="logout">Log Out</a></li>
+                </ul>
+            </nav>
+
+            <!-- Page Content Holder -->
+            <div id="content">
+
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+
+                        <div class="navbar-header">
+                            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                        </div>
+                        <a class="navbar-brand" id="nav-brand" href="">Dashboard</a>
+
+                        <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="#">Page</a></li>
+                                <li><a href="#">Page</a></li>
+                                <li><a href="#">Page</a></li>
+                                <li><a href="#">Page</a></li>
+                            </ul>
+                        </div> -->
+                    </div>
+                </nav>
+                <div class="dashboard-content">

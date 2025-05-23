@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="icon" href="favicon/favicon.ico">
+  <!-- sweet alert -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <style>
+/* body {
+    min-height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+} */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    .adminlgn {
+      width: 35%;
+      margin: 100px auto;
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 3% 4%;
+      transform: translateY(20px);
+    }
+
+    body {
+      /* background-image: linear-gradient( #E55D87, #5FC3E4); */
+      background-color: #F5F5F5;
+    }
+  </style>
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <div class="adminlgn">
+    <form action="/admin" method="post">
+      <%- include("../partials/error"); -%>
+      <div class="form-group">
+        <label for="adminId">Admin Id</label>
+        <input type="number" name="adminId" class="form-control no"
+        value="<%= typeof adminId != 'undefined' ? adminId : ''%>" placeholder="Admin ID" autofocus>
+      </div>
+      <div class="form-group">
+        <label for="adminPass">Password</label>
+        <input type="password" name="adminPass" class="form-control"
+        value="<%= typeof adminPass != 'undefined' ? adminPass : ''%>" placeholder="Password">
+      </div>
+      <button type="submit" class="btn btn-primary">Sign In</button>
+    </form>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Faculty Manager</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="icon" href="favicon/favicon.ico">
+  <!-- sweet alert -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <style>
+    body {
+      min-height: 100%;
+      margin: 0;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-image: linear-gradient(#E55D87, #5FC3E4);
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    .container {
+      width: 35%;
+      margin: 150px auto;
+      background-color: #F5F5F5;
+      border-radius: 25px;
+      padding: 4% 5%;
+    }
+
+    .container-btn {
+      padding-top: 20px;
+    }
+
+    .login-btn {
+      width: 100%;
+      border-radius: 25px;
+      background: #57b846;
+      outline: none !important;
+      border: none;
+      color: #fff;
+      height: 50px;
+      font-size: 15px;
+      font-family: Montserrat;
+      font-weight: bold;
+      transition: all 0.4s;
+    }
+
+    .login-btn:hover {
+      background: #333333;
+      cursor: pointer;
+    }
+  </style>
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <%- include("partials/error"); -%>
+    <div>
+      <button onclick="location.href='/faculty'" type="submit" class="login-btn">
+        FACULTY
+      </button>
+    </div>
+    <div class="container-btn">
+      <button onclick="location.href='/student'" type="submit" class="login-btn">
+        STUDENT
+      </button>
+    </div>
+    <div class="container-btn">
+      <button onclick="location.href='/admin'" type="submit" class="login-btn">
+        ADMIN
+      </button>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<%- include("../partials/admHeader"); -%>
+<% var i = 1 %>
+<div class="studRmv">
+  <div class="w3-container">
+    <h3>List of Students</h3> <br>
+    <table class="w3-table-all w3-centered w3-card-4">
+      <tr>
+        <th>Sr No.</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Student ID</th>
+        <th>Branch</th>
+        <th>Phone</th>
+        <th>Remove</th>
+      </tr>
+      <% listOfStud.forEach(function(stud){ %>
+      <tr>
+        <td><%=i++%> </td>
+        <td><%=stud.name%></td>
+        <td><%=stud.email%></td>
+        <td><%=stud.studId%></td>
+        <td><%=stud.branch%></td>
+        <td><%=stud.phone%></td>
+        <form class="rmv" id="rmvStud" action="/admin/studentList" method="post">
+          <td class="w3-hover-blue deleteFac">
+            <input class="studcheck" id="studcheck" type="checkbox" name="checkbox" value="<%=stud.studId%>">
+            <!-- <input type="hidden" name="facId" value="<%=stud.studId%>">
+            <i class="fas fa-trash-alt"></i> -->
+          </td>
+        </form>
+      </tr>
+      <%  }) %>
+    </table>
+  </div>
+</div>
+<%- include("../partials/admFooter"); -%>

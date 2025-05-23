@@ -1,0 +1,25 @@
+<%- include("../partials/studHeader"); -%>
+<div class="viewEvent">
+    <div class="w3-container ">
+        <h3>List of General Events</h3><br>
+        <table class="w3-table-all w3-card">
+          <tr>
+            <th>Sr No.</th>
+            <th>Event Name</th>
+            <th>Event Date</th>
+            <th>Event Description</th>
+            
+          </tr>
+        <% event.forEach(function(evt){ %>
+          <tr>
+            <td class="sr"><%=i%></td>
+            <td class="evt"><%=evt.name%></td>
+            <td class="evt"><%=evt.date.toString().replace("05:30:00 GMT+0530 (India Standard Time)","")%></td>
+            <td id="evtDesc" class="evtDesc"><%=evt.description%></td>
+          </tr> 
+          <% i++ %>
+          <%  }) %>       
+        </table>
+      </div>
+</div>
+<%- include("../partials/studFooter"); -%>

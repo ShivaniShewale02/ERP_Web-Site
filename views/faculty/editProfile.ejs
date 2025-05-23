@@ -1,0 +1,55 @@
+<%- include("../partials/header"); -%>
+<%- include("../partials/error"); -%>
+<div class="facEditProfile">
+
+    <form action="/faculty/editProfile" method="POST">
+        <h3 class="editHdg">Personal Details</h3>
+        <div class="form-row ep-row">
+          <div class="form-group col-md-6">
+            <label class="edtLbl" for="editEmail">Email</label>
+            <input type="email" class="form-control" id="editEmail"  name="editEmail" value="<%=facEmail%>">
+          </div>
+          <div class="form-group col-md-6">
+            <label class="edtLbl" for="editId">ID</label>
+            <input type="number" class="form-control" id="editId" name="editId" value="<%=facId%>" readonly>
+          </div>
+        </div>    
+        <div class="form-row ep-row">
+          <div class="form-group col-md-6">
+            <label class="edtLbl" for="editName">Name</label>
+            <input type="text" class="form-control" id="editName" name="editName" value="<%=facName%>">
+          </div>
+          <div class="form-group col-md-6">
+            <label class="edtLbl" for="editPhone">Phone</label>
+            <input type="number" class="form-control" id="editPhone" name="editPhone" value="<%=facPhone%>">
+          </div>
+        </div>
+        <div id="frmAOF" class="form-group">
+            <label class="edtLbl" for="editAOF">Area of Interest</label>
+            <input type="text" class="form-control" id="editAOF" name="editAOF" value="<%=facAOF%>">
+          </div>
+          <h3 class="editHdg">Change Password</h3>
+
+            <div class="form-group CngPass">
+              <label class="edtLbl" for="editOldPass">Old Password</label>
+              <input type="password" class="form-control edtPass" id="editOldPass"  name="editOldPass" placeholder="Enter Old Password">
+              <i id="oldEye" class="far fa-eye"></i>
+            </div>
+            <div class="form-group CngPass">
+                <label class="edtLbl" for="editNewPass">New Password</label>
+                <input type="password" class="form-control edtPass" id="editNewPass"  name="editNewPass" placeholder="Enter New Password">
+                <i id="newEye" class="far fa-eye"></i>
+              </div>
+              <div class="form-group CngPass">
+                <label class="edtLbl" for="editNewCnfPass">Confirm New Password</label>
+                <input type="password" class="form-control edtPass" id="editNewCnfPass"  name="editNewCnfPass" placeholder="Enter Confirm New Password">
+                <i id="newCnfEye" class="far fa-eye"></i>
+              </div>
+ 
+
+        <button type="submit" class="btn btn-primary updateBtn"><i class="far fa-edit"></i> Update</button>
+      </form>
+</div>
+<%- include("../partials/footer"); -%>
+
+<!-- <i class="far fa-eye-slash"></i> -->

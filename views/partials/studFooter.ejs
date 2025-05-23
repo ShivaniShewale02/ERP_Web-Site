@@ -1,0 +1,84 @@
+</div>
+</div>
+</div>
+
+
+
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<!-- Bootstrap Js CDN -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- jQuery Custom Scroller CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<script type="text/javascript">
+  var allCell = document.querySelectorAll(".facTableData");
+  var freeCell = document.querySelectorAll(".facFreeSlot");
+  $(document).ready(function() {
+    $("#sidebar").mCustomScrollbar({
+      theme: "minimal"
+    });
+
+    $('#sidebarCollapse').on('click', function() {
+      $('#sidebar, #content').toggleClass('active');
+      $('.collapse.in').toggleClass('in');
+      $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+    });
+})
+var freeCell = document.querySelectorAll(".facFreeSlot");
+freeCell.forEach((cell)=>{
+    if(cell.innerText == ""){
+      cell.innerText = "There are no free lectures";
+    }
+  })
+
+  var oldPass =  document.querySelector("#editOldPass");
+    var newPass = document.querySelector("#editNewPass");
+    var newCnfPass  = document.querySelector("#editNewCnfPass")
+
+    var oldEye =  document.querySelector("#oldEye");
+    var newEye = document.querySelector("#newEye");
+    var newCnfEye  = document.querySelector("#newCnfEye");
+
+    $(document).on('input', '#editOldPass', function(){
+    oldEye.style.visibility = "visible";
+    });
+
+    $(document).on('input', '#editNewPass', function(){
+      newEye.style.visibility = "visible";
+    });
+    $(document).on('input', '#editNewCnfPass', function(){
+      newCnfEye.style.visibility = "visible";
+    });
+
+    oldEye.addEventListener("click", (e)=> {
+      var type = oldPass.getAttribute('type') === "password" ? "text" : "password";
+      oldPass.setAttribute("type", type);
+      oldEye.classList.toggle("fa-eye-slash");
+    })
+
+
+    newEye.addEventListener("click", (e)=> {
+      var type = newPass.getAttribute('type') === "password" ? "text" : "password";
+      newPass.setAttribute("type", type);
+      newEye.classList.toggle("fa-eye-slash");
+    })
+    newCnfEye.addEventListener("click", (e)=> {
+      var type = newCnfPass.getAttribute('type') === "password" ? "text" : "password";
+      newCnfPass.setAttribute("type", type);
+      newCnfEye.classList.toggle("fa-eye-slash");
+    })
+
+  var header = document.getElementById("classActive");
+  var btns = header.getElementsByClassName("link");
+  for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+</script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<%- include("../partials/header"); -%>
+    <div class="Time-Table">
+          <table class="facTimeTable"  cellspacing="1">
+              <!--<caption>Timetable</caption>-->
+              <tr class="facTableRow">
+                  <th class="facTableHead">
+                      <b>Time</b>
+                  </th>
+                  <th class="facTableHead">
+                      <b>Monday</b>
+                  </th>
+                  <th class="facTableHead">
+                      <b>Tuesday</b>
+                  </th>
+                  <th class="facTableHead">
+                      <b>Wednesday</b>
+                  </th>
+                  <th class="facTableHead">
+                      <b>Thursday</b>
+                  </th>
+                  <th class="facTableHead">
+                      <b>Friday</b>
+                  </th>
+                  <th class="facTableHead">
+                      <b>Saturday</b>
+                  </th>
+
+              </tr>
+            <%  for (var i = 0; i < monday.length; i++) { %>
+                <tr class="facTableRow">
+                    <th class="facTableHead time">
+                        <%=monday[i].time%>  <br> </th>
+                    <td class="facTableData" ><%=monday[i].subject%> <br><%=monday[i].subLocation%></td>
+                    <td class="facTableData" ><%=tuesday[i].subject%>
+                        <br><%=tuesday[i].subLocation%></td>
+                    <td class="facTableData" ><%=wednesday[i].subject%>
+                        <br><%=wednesday[i].subLocation%></td>
+                    <td class="facTableData" ><%=thursday[i].subject%>
+                        <br><%=thursday[i].subLocation%>
+                    </td>
+                    <td class="facTableData" ><%=friday[i].subject%>
+                        <br><%=friday[i].subLocation%>
+                    </td>
+                    <td class="facTableData" ><%=saturday[i].subject%>
+                        <br><%=saturday[i].subLocation%>
+                    </td>
+                </tr>
+                <%  }  %>
+            </table>
+      </div>
+  <%- include("../partials/footer"); -%>

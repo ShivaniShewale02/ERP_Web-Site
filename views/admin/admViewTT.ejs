@@ -1,0 +1,21 @@
+<%- include("../partials/admHeader"); -%>
+<div class="form-group col-md-4">
+  <form action="" method="">
+    <label for="facNames">Faculty</label>
+    <select name="facNames" id="facNames" class="form-control" onchange="showFac(this.value)">
+      <option value="" selected>Choose a faculty</option>
+      <% listOfFacNames.forEach(function(facName){ %>
+      <option value="<%=facName.name%>"><%=facName.name%></option>
+      <%  }) %>
+    </select>
+  </form>
+</div> <br><br><br><br><br><br>
+<div class="viewTT">
+    <table id="admTimeTable" class="admTimeTable"  cellspacing="1">
+
+  </table>
+  <div class="alert alert-info" role="alert">
+  Choose a Faculty to View their Time-Table!!
+</div>
+</div>
+<%- include("../partials/admFooter"); -%>

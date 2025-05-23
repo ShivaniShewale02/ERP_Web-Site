@@ -1,0 +1,59 @@
+<% if(typeof errors!= "undefined"){ %>
+<% errors.forEach((error)=>{ %>
+  <div class="alert alert-warning alert-dismissible" role="alert">
+  <button  type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <%=error.msg%>
+</div>
+<%  }); %>
+<% } %>
+
+<% if(typeof studAdd_errors!= "undefined"){ %>
+  <% studAdd_errors.forEach((error)=>{ %>
+    <div class="alert alert-warning alert-dismissible" role="alert">
+    <button  type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <%=error.msg%>
+  </div>
+  <%  }); %>
+  <% } %>
+
+<% if(typeof admLgnErr!= "undefined"){ %>
+<% admLgnErr.forEach((error)=>{ %>
+  <div class="alert alert-warning alert-dismissible" role="alert">
+  <button  type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <%=error.msg%>
+</div>
+<%  }); %>
+<% } %>
+
+<% if(success_msg != ""){ %>
+  <script type="text/javascript">
+    <% success_msg.forEach((msg)=>{ %>
+    swal({
+    text: <%- JSON.stringify(msg) %>,
+    icon: "success",
+  });
+  <%  }); %>
+  </script>
+<% } %>
+
+<% if(error_msg != ""){ %>
+  <script type="text/javascript">
+    <% error_msg.forEach((err)=>{ %>
+    swal({
+    text: <%- JSON.stringify(err) %>,
+    icon: "warning",
+  });
+  <%  }); %>
+  </script>
+<% } %>
+
+<% if(error != ""){ %>
+  <script type="text/javascript">
+    <% error.forEach((err)=>{ %>
+    swal({
+    text: <%- JSON.stringify(err) %>,
+    icon: "warning",
+  });
+  <%  }); %>
+  </script>
+<% } %>

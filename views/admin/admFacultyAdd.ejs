@@ -1,0 +1,52 @@
+<%- include("../partials/admHeader"); -%>
+
+<div class="addFacultyAdmin">
+  <h3 class="admHdg" style="text-align: center;">Add Faculty</h3>
+<form action="/admin/addFaculty" method="post">
+  <%- include("../partials/error"); -%>
+  <div class="form-row pdg">
+    <div class="form-group col-md-6">
+      <label class="admLbl" for="facAdminEmail">Email</label>
+      <input type="email" class="form-control" name="facAdminEmail" placeholder="Email"
+      value="<%= typeof regFacEmail != 'undefined' ? regFacEmail : ''%>" autofocus>
+    </div>
+    <div class="form-group col-md-6">
+      <label class="admLbl" for="facAdminPass">Password</label>
+      <input type="password" class="form-control" name="facAdminPass"
+      value="<%= typeof regFacPass != 'undefined' ? regFacPass : ''%>" placeholder="Password">
+    </div>
+  </div>
+  <div class="form-row">
+  <div class="form-group col-md-6" style="margin-bottom:-15px;">
+    <label class="admLbl" for="facultyName">Name</label>
+    <input type="text" class="form-control" name="facultyAdminName"
+    value="<%= typeof regFacName != 'undefined' ? regFacName : ''%>" placeholder="Faculty Name">
+  </div>
+  <div class="form-group col-md-6" style="margin-bottom:-15px;">
+    <label class="admLbl" for="facPhone">Phone</label>
+    <input type="number" class="form-control" name="facPhone"
+    value="<%= typeof regFacPhone != 'undefined' ? regFacPhone : ''%>" placeholder="Faculty Phone">
+  </div>
+    </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label class="admLbl" for="facRole">Role</label>
+      <input type="text" class="form-control" name="facRole"
+      value="<%= typeof regFacRole != 'undefined' ? regFacRole : ''%>" placeholder="Faculty Role">
+    </div>
+    <div class="form-group col-md-6">
+      <label class="admLbl" for="regFacId">ID</label>
+      <input type="number" class="form-control no" name="regFacId"
+      value="<%= typeof regFacId != 'undefined' ? regFacId : ''%>"placeholder="Faculty ID">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="admLbl" for="areaOfInterest">Area 0f Interest</label>
+    <input type="text" class="form-control" name="areaOfInterest"
+    value="<%= typeof regFacAreaOfInterest != 'undefined' ? regFacAreaOfInterest : ''%>" placeholder="Area Of Interest">
+  </div>
+
+  <button type="submit" class="btn btn-primary addFacultyBtn"><i style="font-size:15px;" class="fas fa-plus-circle"></i> Add Faculty</button>
+</form>
+</div>
+<%- include("../partials/admFooter"); -%>

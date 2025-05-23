@@ -1,0 +1,128 @@
+<%- include("../partials/studHeader"); -%>
+<div class="form-group col-md-4">
+<% var mondayTime = [] %>
+<% var tuesdayTime = [] %>
+<% var wednesdayTime = [] %>
+<% var thursdayTime = [] %>
+<% var fridayTime = [] %>
+<% var saturdayTime = [] %>
+    <form action="/student/freeSlot" method="post">
+      <label for="facNames">Faculty</label>
+      <select name="facNames" id="facNames" class="form-control" onchange=
+      "this.form.submit()">
+        <option value="" selected>Choose a faculty</option>
+        <% listOfFacNames.forEach(function(facName){ %>
+        <option value="<%=facName.name%>"><%=facName.name%></option>
+        <%  }) %>
+      </select>
+    </form>
+  </div> <br><br><br><br><br><br>
+  <div class="viewFS">
+    
+    <div class="w3-container">
+      <% if(success){ %>
+      <h4 style="margin-bottom: 20px;"><%=facName%> free slot of the week</h4>
+      <%  } %>
+      <table id="studFreeSlot" class="w3-table-all w3-centered w3-card-4">
+      <% if(success){ %>
+        <tr>
+          <th>Sr No.</th>
+          <th>Day</th>
+          <th>Free Slot Time</th>
+          <th>No. of free slot</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Monday</td>
+          <td class="facFreeSlot">
+            <% timeTable.Monday.forEach((obj)=>{ %>
+            <% if(obj.subject === "FREE"){ %>
+               <span><%=obj.time%></span> <br>
+                <%mondayTime.push(obj.time) %>
+            <%  } %>
+            <% }) %>
+    
+          </td>
+          <td><%=mondayTime.length%></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Tuesday</td>
+          <td class="facFreeSlot">
+            <% timeTable.Tuesday.forEach((obj)=>{ %>
+            <% if(obj.subject === "FREE"){ %>
+               <span><%=obj.time%></span> <br>
+                <%tuesdayTime.push(obj.time) %>
+            <%  } %>
+            <% }) %>
+    
+          </td>
+          <td><%=tuesdayTime.length%></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Wednesday</td>
+          <td class="facFreeSlot">
+            <% timeTable.Wednesday.forEach((obj)=>{ %>
+            <% if(obj.subject === "FREE"){ %>
+               <span><%=obj.time%></span> <br>
+                <%wednesdayTime.push(obj.time) %>
+            <%  } %>
+            <% }) %>
+    
+          </td>
+          <td><%=wednesdayTime.length%></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Thursday</td>
+          <td class="facFreeSlot">
+            <% timeTable.Thursday.forEach((obj)=>{ %>
+            <% if(obj.subject === "FREE"){ %>
+               <span><%=obj.time%></span> <br>
+                <%thursdayTime.push(obj.time) %>
+            <%  } %>
+            <% }) %>
+    
+          </td>
+          <td><%=thursdayTime.length%></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Friday</td>
+          <td class="facFreeSlot">
+            <% timeTable.Friday.forEach((obj)=>{ %>
+            <% if(obj.subject === "FREE"){ %>
+               <span><%=obj.time%></span> <br>
+                <%fridayTime.push(obj.time) %>
+            <%  } %>
+            <% }) %>
+    
+          </td>
+          <td><%=fridayTime.length%></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Saturday</td>
+          <td class="facFreeSlot">
+            <% timeTable.Saturday.forEach((obj)=>{ %>
+            <% if(obj.subject === "FREE"){ %>
+               <span><%=obj.time%></span> <br>
+                <%saturdayTime.push(obj.time) %>
+            <%  } %>
+            <% }) %>
+    
+          </td>
+          <td><%=saturdayTime.length%></td>
+        </tr>
+      <%  } else { %>
+        <div class="alert alert-info" role="alert">
+          Choose a Faculty to View their Free Slot of the Week!!
+        </div>
+      <% } %> 
+       
+    </table>
+    </div>
+  
+  </div>
+<%- include("../partials/studFooter"); -%>

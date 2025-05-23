@@ -1,0 +1,39 @@
+/* ---------------------------------------------------
+      faculty edit profile
+----------------------------------------------------- */
+.facEditProfile{
+    margin-left: 110px;
+    width: 70%;
+    padding : 2% 3%;
+  background-color: #F5F5F5;
+  border-radius: 15px;
+}
+.ep-row .form-group{
+    padding: 10px;
+    margin-bottom: 5px;
+}
+.CngPass{
+    position: relative;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+.edtPass{
+    width: 50%;
+}
+#frmAOF.form-group{
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.updateBtn{
+    background-color: #5bc0de;
+    margin: 10px 10px;
+}
+
+.fa-eye{
+    visibility: hidden;
+    position: absolute;
+    top : 44px;
+    left: 285px;
+    cursor: pointer;
+    font-size: 16px;
+}

@@ -1,0 +1,51 @@
+<%- include("../partials/header"); -%>
+    <div id="My-profile">
+      <!-- <img style="width:11%" src="img/userProfile.svg" alt="svg"> -->
+      <div class="page-content page-container" id="page-content">
+    <div class="padding">
+        <div id=row class="row">
+            <div class="col-md-10">
+                <div class="card user-card-full">
+                    <div class="row m-l-0 m-r-0">
+                        <div class="col-sm-4 bg-c-lite-green user-profile">
+                            <div class="card-block text-center text-white">
+                                <div class="m-b-25"> <img src="/img/userProfile.svg" style="width:45%" class="img-radius" alt="User-Profile-Image"> </div>
+                                <h6 class="white fon f-w-600"><%=foundFacName%></h6>
+                                <p class="white"><%=foundFacRole%></p> <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="card-block">
+                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Information</h6>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="mclass m-b-10 f-w-600">Email</p>
+                                        <h6 class="text-muted f-w-400"><%=foundFacEmail%></h6>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="mclass m-b-10 f-w-600">Phone</p>
+                                        <h6 class="text-muted f-w-400"><%=foundFacPhone%></h6>
+                                    </div>
+                                </div>
+                                <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Area of Interest</h6>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h6 class="text-muted f-w-400"><%=foundFacAOF%></h6>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+    <div class="container-btn">
+        <button onclick="location.href='/faculty/editProfile'" type="submit" class="edit-btn">
+          Edit Profile
+        </button>
+      </div>
+<%- include("../partials/footer"); -%>

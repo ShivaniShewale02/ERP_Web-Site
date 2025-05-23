@@ -1,0 +1,38 @@
+<%- include("../partials/admHeader"); -%>
+<% var i=1 %>
+<div class="facRmv">
+  <div class="w3-container">
+    <h3>List of Faculties</h3> <br>
+    <table class="w3-table-all w3-centered w3-card-4">
+      <tr>
+        <th>Sr No.</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Faculty ID</th>
+        <th>Role</th>
+        <th>Area of Interest</th>
+        <th>Phone</th>
+        <th>Remove</th>
+      </tr>
+      <% listOfFac.forEach(function(fac){ %>
+      <tr>
+        <td><%=i++%></td>
+        <td><%=fac.name%></td>
+        <td><%=fac.email%></td>
+        <td><%=fac.facId%></td>
+        <td><%=fac.role%></td>
+        <td><%=fac.areaOfInterest%></td>
+        <td><%=fac.phone%></td>
+        <form class="rmv" id="rmvFac" action="/admin/facultyList" method="post">
+          <td class="w3-hover-blue deleteFac">
+            <input class="check" id="check" type="checkbox" name="checkbox" value="<%=fac.facId%>">
+            <!-- <input type="hidden" name="facId" value="<%=fac._id%>">
+            <i class="fas fa-trash-alt"></i> -->
+          </td>
+        </form>
+      </tr>
+      <%  }) %>
+    </table>
+  </div>
+</div>
+<%- include("../partials/admFooter"); -%>

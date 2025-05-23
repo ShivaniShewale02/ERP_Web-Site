@@ -1,0 +1,83 @@
+ /* View Event */
+.viewEvent{
+    width : 100%;
+    margin : 0 auto;
+}
+.evt{
+    width: 13%;
+}
+.evtDesc{
+
+    width: 50%;
+}
+.sr{
+    width: 6%;
+}
+#evtDesc{
+    text-align: justify;
+}
+
+/* FREE SLOT */
+.viewFS{
+    transform: translateY(-70px);
+    width : 70%;
+    margin : 0 auto;
+}
+
+/* EDIT PROFILE */
+.facEditProfile{
+    margin-left: 110px;
+    width: 70%;
+    padding : 2% 3%;
+  background-color: #F5F5F5;
+  border-radius: 15px;
+}
+.form-row .form-group{
+    padding: 10px;
+    margin-bottom: 5px;
+}
+.CngPass{
+    position: relative;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+.edtPass{
+    width: 50%;
+}
+#frmAOF.form-group{
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.updateBtn{
+    background-color: #5bc0de;
+    margin: 10px 10px;
+}
+
+.fa-eye{
+    position: absolute;
+    top : 44px;
+    left: 285px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Edit button of profile */
+
+.edit-btn{
+    margin-left: 350px;
+    width: 20%;
+    border-radius: 25px;
+    background: #57b846;
+    outline: none !important;
+    border: none;
+    color: #fff;
+    height: 50px;
+    font-size: 15px;
+    font-family: Montserrat;
+    font-weight: bold;
+    transition: all 0.4s;
+  }
+  .edit-btn:hover{
+    background: #333333;
+    cursor: pointer;
+  }

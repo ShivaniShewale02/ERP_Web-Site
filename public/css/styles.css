@@ -1,0 +1,158 @@
+body{
+  background-image: linear-gradient( #E55D87, #5FC3E4);
+  font-family: 'Poppins', sans-serif;
+}
+.form{
+  height: 680px;
+  width: 960px;
+  background:  #fff;
+  margin: 15px auto;
+  border-radius: 10px;
+  padding: 177px 130px 33px 95px;
+}
+
+.title{
+  font-size: 24px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  width: 100%;
+  display: block;
+  line-height: 1.2;
+  padding-bottom: 54px;
+}
+.input{
+  height: 50px;
+  border-radius: 50px;
+  background: #e6e6e6;
+  color: #666666;
+  display: block;
+  font-size: 15px;
+  border: none;
+  padding: 0 30px 0 68px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  line-height: 1.5;
+  width: 100%;
+  outline: none;
+  margin-bottom: 10px;
+}
+.validate-form{
+  position: absolute;
+  width:290px;
+  margin: 0 0 0 63px;
+  transition: .6s;
+}
+.facId{
+  position: relative;
+}
+.ID{
+  position: absolute;
+  font-size: 15px;
+  color: #666666;
+  padding-left: 35px;
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.facPassword{
+  position: relative;
+}
+.password{
+  position: absolute;
+  font-size: 15px;
+  color: #666666;
+  padding-left: 35px;
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.login-btn{
+  width: 100%;
+  border-radius: 25px;
+  background: #57b846;
+  outline: none !important;
+  border: none;
+  color: #fff;
+  height: 50px;
+  font-size: 15px;
+  font-family: Montserrat;
+  font-weight: bold;
+  transition: all 0.4s;
+}
+.login-btn:hover{
+  background: #333333;
+  cursor: pointer;
+}
+.container-btn{
+  padding-top: 20px;
+}
+.txt1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #999999;
+}
+.anchorText{
+  padding-top: 50px;
+  text-align: center;
+  font-size: 13px;
+  color: #666666;
+}
+a{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: #666666;
+  font-size: 13px;
+  transition: all 0.4s;
+}
+.fa{
+  margin-left: 5px;
+
+}
+a:hover {
+    text-decoration: none;
+    color: #57b846;
+}
+#b{
+  top: 0;
+  left:0;
+  position: absolute;
+  width: 118px;
+  height: 100%;
+  background: #57b846;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+.button-box{
+  width: 236px;
+  margin: 420px 0 0 90px;
+  position: relative;
+  border-radius: 30px;
+}
+.toggle-btn{
+  color: #323232;
+  font-family: 'Poppins', sans-serif;
+  font-weight: normal;
+  padding: 10px 30px;
+  cursor: pointer;
+  border: 0;
+  outline: none !important;
+  background: transparent;
+  position: relative;
+}
+#login{
+  left: 15px;
+}
+#register{
+  left: 450px;
+}
+.over{
+  overflow: hidden;
+}

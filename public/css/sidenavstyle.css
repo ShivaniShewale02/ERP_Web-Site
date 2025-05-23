@@ -1,0 +1,613 @@
+/*
+    DEMO STYLE
+*/
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+/* .font{
+  font-size: 14px;
+} */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: #7386D5;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #6d7fcc;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+}
+/* .active{
+  color: #fff;
+  background: #6d7fcc;
+} */
+
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+    content: '\e259';
+    display: block;
+    position: absolute;
+    right: 20px;
+    font-family: 'Glyphicons Halflings';
+    font-size: 0.6em;
+}
+a[aria-expanded="true"]::before {
+    content: '\e260';
+}
+
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+a.logout {
+    background: #fff;
+    color: #7386D5;
+}
+a.article, a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+
+hr{
+    border-top: 1px solid #eee;
+    margin: 5px;
+}
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+#content {
+    overflow-x: hidden;
+    overflow-y : hidden;
+    width: calc(100% - 250px);
+    padding: 10px 10px 40px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+}
+#content.active {
+    width: 100%;
+}
+#nav-brand{
+  font-size: 18px;
+  margin-left: 10px;
+  padding-left: 0px;
+}
+
+/* ---------------------------------------------------
+    My profile css
+----------------------------------------------------- */
+.edit-btn{
+    margin-left: 350px;
+    width: 20%;
+    border-radius: 25px;
+    background: #57b846;
+    outline: none !important;
+    border: none;
+    color: #fff;
+    height: 50px;
+    font-size: 15px;
+    font-family: Montserrat;
+    font-weight: bold;
+    transition: all 0.4s;
+  }
+  .edit-btn:hover{
+    background: #333333;
+    cursor: pointer;
+  }
+#row{
+  margin : 0;
+}
+.col-sm-8{
+  background-color: #fff;
+}
+#My-profile {
+  transform: translateX(50px);
+
+}
+.fon{
+  font-size: 16px;
+}
+.white{
+
+  color: #fff;
+}
+.mclass{
+  color: #404040;
+  font-size: 1em;
+}
+.col-md-10{
+  background-color: #fff;
+}
+.padding {
+    padding: 3rem !important
+}
+
+.user-card-full {
+    overflow: hidden
+}
+
+.card {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+    box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+    border: none;
+    margin-bottom: 30px
+}
+
+.m-r-0 {
+    margin-right: 0px
+}
+
+.m-l-0 {
+    margin-left: 0px
+}
+
+.user-card-full .user-profile {
+    border-radius: 5px 0 0 5px;
+}
+
+.bg-c-lite-green {
+    background: -webkit-gradient(linear, left top, right top, from(#73b8d5), to(#6dd5ed));
+    background: linear-gradient(to right, #73b8d5, #6dd5ed);
+    /* background-color: #73b8d5; */
+}
+
+.user-profile {
+    padding: 20px 0
+}
+
+.card-block {
+    padding: 1.25rem
+}
+
+.m-b-25 {
+    margin-bottom: 25px
+}
+
+.img-radius {
+    border-radius: 5px
+}
+
+h6 {
+    font-size: 14px
+}
+
+.card .card-block p {
+    line-height: 25px
+}
+
+@media only screen and (min-width: 1400px) {
+    p {
+        font-size: 14px
+    }
+}
+
+.card-block {
+    padding: 1.25rem
+}
+
+.b-b-default {
+    border-bottom: 1px solid #e0e0e0
+}
+
+.m-b-20 {
+    margin-bottom: 20px
+}
+
+.p-b-5 {
+    padding-bottom: 5px !important
+}
+
+.card .card-block p {
+    line-height: 25px
+}
+
+.m-b-10 {
+    margin-bottom: 10px
+}
+
+.text-muted {
+    color: #919aa3 !important
+}
+
+.b-b-default {
+    border-bottom: 1px solid #e0e0e0
+}
+
+.f-w-600 {
+    font-weight: 600
+}
+
+.m-b-20 {
+    margin-bottom: 20px
+}
+
+.m-t-40 {
+    margin-top: 20px
+}
+
+.p-b-5 {
+    padding-bottom: 5px !important
+}
+
+.m-b-10 {
+    margin-bottom: 10px
+}
+
+.m-t-40 {
+    margin-top: 20px
+}
+
+.user-card-full .social-link li {
+    display: inline-block
+}
+
+.user-card-full .social-link li a {
+    font-size: 20px;
+    margin: 0 10px 0 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out
+}
+
+/* ---------------------------------------------------
+    Add Event
+----------------------------------------------------- */
+.addEventBtn{
+    transform: translate(20px, -10px);
+    background-color: #5bc0de;
+}
+.Add-Event{
+    transform: translateY(-10px);
+}
+
+.form-control{
+  resize: none;
+  padding: 6px 12px;
+}
+.form-group{
+  padding: 20px;
+}
+.event{
+  /* box-shadow: 0 1px 20px 0 #F0F0F0; */
+  overflow: hidden;
+    padding : 25px;
+    border-radius : 15px;
+    background-color : #F5F5F5;
+    width : 650px;
+    height : 350px;
+    margin-top : 20px;
+    margin-left: 180px;
+}
+
+/* ---------------------------------------------------
+    TIME-TABLE
+----------------------------------------------------- */
+.Time-Table{
+  transform: translate(-20px,-20px);
+}
+.recess-color{
+  font-weight: 600;
+  background-color: #E0E0E0;
+}
+/* top-left border-radius */
+    table .facTableRow:first-child th:first-child,
+    table.Info .facTableRow:first-child td:first-child {
+        border-top-left-radius: 15px;
+    }
+
+    /* top-right border-radius */
+    table .facTableRow:first-child th:last-child,
+    table.Info .facTableRow:first-child td:last-child {
+        border-top-right-radius: 15px;
+    }
+
+    /* bottom-left border-radius */
+    table .facTableRow:last-child td:last-child {
+        border-bottom-right-radius: 15px;
+    }
+
+    /* bottom-right border-radius */
+    table .facTableRow:last-child th:first-child {
+        border-bottom-left-radius: 15px;
+    }
+
+.facTimeTable{
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.facTimeTable,.facTableData,.facTableHead{
+    border: 1px;
+}
+
+.facTableRow{background-color: #F5F5F5;}
+
+.time{
+  font-weight: 600;
+}
+
+.facTableHead{
+    text-align: center;
+    height:50px;
+    width: 115px;
+    padding: 8px;
+    background-color: #C0C0C0;
+    color: black;
+}
+.facTableData,.recess-color{
+
+    font-size:13px;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    padding: 8px;
+}
+
+/* ---------------------------------------------------
+      faculty free slot
+----------------------------------------------------- */
+.freeSlot{
+  width : 70%;
+  margin : 0 auto;
+}
+
+
+/* ---------------------------------------------------
+      faculty&student edit profile
+----------------------------------------------------- */
+.editHdg{
+    font-weight: 600;
+    margin-left: 10px; 
+    font-size: 20px;
+}
+.edtLbl{
+    font-weight: 500;
+}
+  
+
+/* ---------------------------------------------------
+    ADMIN        ----faculty add
+----------------------------------------------------- */
+
+.admHdg{
+    font-weight: 600;
+    font-size: 22px;
+}
+.admLbl{
+    font-weight: 500;
+}
+
+.addFacultyAdmin{
+  margin-left: 180px;
+  padding : 1% 3%;
+  background-color: #F5F5F5;
+  border-radius: 15px;
+  width: 55%;
+  transform: translateY(-20px);
+}
+.addFacultyBtn{
+  transform: translate(150px,-10px);
+  background-color: #5bc0de;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.pdg .form-group{
+  margin-bottom: -15px;
+}
+
+
+/* ---------------------------------------------------
+    ADMIN        ----faculty rmv
+----------------------------------------------------- */
+.facRmv{
+  width : 90%;
+  margin : 0 auto;
+}
+
+/* ---------------------------------------------------
+    ADMIN        ----faculty ADD timetable
+----------------------------------------------------- */
+div.admTimeTable{
+  width: 50%;
+  height : 440px;
+  margin-left: 180px;
+  border-radius: 15px;
+  padding: 2% 5%;
+  background-color: #F5F5F5;
+}
+.timeTableFormGroup{
+  padding: 5px;
+}
+.addTime{
+  background-color: #5bc0de;
+  transform: translateX(5px);
+}
+.hdnTime{
+  font-size: 20px;
+  margin: 0 0 15px;
+  text-align: center;
+}
+/* ---------------------------------------------------
+    ADMIN        ----faculty View timetable
+----------------------------------------------------- */
+div.col-md-4{
+  transform: translate(300px,-45px);
+}
+.viewTT{
+  transform: translateY(-60px);
+}
+.admTimeTable{
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------------------------------------------------
+    ADMIN - faculty view free slot
+----------------------------------------------------- */
+
+.viewFS{
+    transform: translateY(-70px);
+    width : 70%;
+    margin : 0 auto;
+}
+
+
+/* ---------------------------------------------------
+    ADMIN - STUDENT RMV
+----------------------------------------------------- */
+.studRmv{
+    width : 90%;
+    margin : 0 auto;
+  }
+
+
+/* View Event */
+.viewEvent{
+    width : 100%;
+    margin : 0 auto;
+}
+.evt{
+    width: 13%;
+}
+.evtDesc{
+    width: 50%;
+}
+.sr{
+    width: 6%;
+}
+#evtDesc{
+    text-align: justify;
+}
+
+
+
+.facEvtDesc{
+    width: 43%;
+}
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #content {
+        width: 100%;
+    }
+    #content.active {
+        width: calc(100% - 250px);
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}

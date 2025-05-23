@@ -1,0 +1,50 @@
+<%- include("../partials/admHeader"); -%>
+
+<div class="addFacultyAdmin">
+
+<form action="/admin/addStudent" method="post">
+  <%- include("../partials/error"); -%>
+  <div class="form-row pdg">
+      <h3 class="admHdg" style="text-align: center;"> Add Student</h3>
+    <div class="form-group col-md-6">
+      <label class="admLbl" for="studEmail">Email</label>
+      <input type="email" class="form-control" name="studEmail" placeholder="Email"
+      value="<%= typeof regStudEmail != 'undefined' ? regStudEmail : ''%>" autofocus>
+    </div>
+    <div class="form-group col-md-6">
+      <label class="admLbl" for="studPass">Password</label>
+      <input type="password" class="form-control" name="studPass"
+      value="<%= typeof regStudPass != 'undefined' ? regStudPass : ''%>" placeholder="Password">
+    </div>
+  </div>
+  <div class="form-row">
+  <div class="form-group col-md-6" style="margin-bottom:-15px;">
+    <label class="admLbl" for="studName">Name</label>
+    <input type="text" class="form-control" name="studName"
+    value="<%= typeof regStudName != 'undefined' ? regStudName : ''%>" placeholder="Student Name">
+  </div>
+  <div class="form-group col-md-6" style="margin-bottom:-15px;">
+    <label class="admLbl" for="studPhone">Phone</label>
+    <input type="number" class="form-control" name="studPhone"
+    value="<%= typeof regStudPhone != 'undefined' ? regStudPhone : ''%>" placeholder="Student Phone">
+  </div>
+    </div>
+    <div class="form-row">
+    <div style="margin-bottom: -15px;" class="form-group col-md-12">
+      <label class="admLbl" for="studId">ID</label>
+      <input type="number" class="form-control no" name="studId"
+      value="<%= typeof regStudId != 'undefined' ? regStudId : ''%>"placeholder="Student ID">
+    </div>
+    <div style="margin-bottom: 15px;" class="form-group col-md-12">
+      <label class="admLbl" for="studBranch">Branch</label>
+      <input type="text" class="form-control no" name="studBranch"
+      value="<%= typeof regStudBranch != 'undefined' ? regStudBranch : ''%>"placeholder="Student Branch">
+    </div>
+    </div>
+
+
+
+  <button type="submit" class="btn btn-primary addFacultyBtn"><i style="font-size:15px;" class="fas fa-plus-circle"></i> Add Student</button>
+</form>
+</div>
+<%- include("../partials/admFooter"); -%>

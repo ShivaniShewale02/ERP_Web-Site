@@ -1,0 +1,25 @@
+<%- include("../partials/header"); -%>
+<%- include("../partials/error"); -%>
+
+<div class="Add-Event">
+  <h3 style="margin-left: 190px;">General Events</h3>
+  <form  class="event" action="/faculty/addEvent" method="POST">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="evtName">Event Name</label>
+      <input type="text" class="form-control" id="evtName" name="evtName" 
+      placeholder="Event Name" required>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="evtDate">Event Date</label>
+      <input type="date" class="form-control dt" id="evtDate" name="evtDate" required >
+    </div>
+     <div class="form-group">
+    <label for="evtDesc">Event Description</label>
+    <textarea rows="4" cols="70" class="form-control"  id="evtDesc" name="evtDesc" rows="1" placeholder="Event Description" required></textarea>
+  </div>
+  </div>
+  <button type="submit" class="btn btn-primary addEventBtn">Add</button>
+  </form>
+</div>
+<%- include("../partials/footer"); -%>
