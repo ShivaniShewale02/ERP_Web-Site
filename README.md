@@ -79,6 +79,6 @@ Contributions are welcome! Feel free to open issues or submit PRs.
 This project is licensed under the **MIT License**.  
 
 ## 📞 Contact  
-- **Devashish Sharma**  
+- **Shivani Shewale**  
 - 📧 Email: work.shivanishewale@gmail.com
 - 🌐 [LinkedIn](https://linkedin.com/in/shivani-shewale-674384352) | [GitHub](https://github.com/ShivaniShewale02)  
